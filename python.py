@@ -48,34 +48,34 @@ def desconto_irrf(salario):
         return desconto
     
     elif salario > 4.664:
-        desconto = (salario * 0.27,5) - (salario)
+        desconto = (salario * 27.5) - (salario)
         print(f"desconto: {desconto}")
         return desconto
     
-def vale_tranporte(salario):
+def vale_transporte(salario):
     resposta_vt = input("deseja o vale transporte? \nuse s ou n para responder: ").lower()
-if resposta_vt == "s":
-    desconto = (salario * 0.06) - (salario)
-    print(f"desconto: {desconto}")
+    if resposta_vt == "s":
+        desconto = (salario * 0.06) - (salario)
+        print(f"desconto: {desconto}")
         return desconto
-else:
-    print(f"nao deseja o vale transporte")
+    else:
+        print(f"nao deseja o vale transporte")
 
-def vale_refeiçao(salario):
+def vale_refeicao(salario):
     resposta_vr = input("deseja o vale refeicao? \nuse s ou n para responder: ").lower()
-if resposta_vr == "s":
-    desconto = (salario * 0.20) - (salario)
-    print(f"desconto: {desconto}")
-    return desconto
-else:
-    print(f"nao deseja o vale refeiçao")
+    if resposta_vr == "s":
+        desconto = (salario * 0.20) - (salario)
+        print(f"desconto: {desconto}")
+        return desconto
+    else:
+        print("nao deseja o vale refeiçao")
 
 def desconto_plano_s(salario):
     dependentes = int(input("digite a quantidade de dependentes: "))
     if dependentes > 0:
-        desconto = salario - 150.00
         dependentes +=1 
-
+        desconto = (salario - 150.00)
+        return desconto
 
 salario = float(input("digte o seu salario: "))
 
